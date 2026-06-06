@@ -44,6 +44,9 @@ const placeOrder = async (req,res) => {
             quantity:1
         })
 
+        console.log("FRONTEND_URL =", frontend_url);
+        console.log("STRIPE_KEY =", process.env.STRIPE_SECRET_KEY ? "FOUND" : "MISSING");
+
         const session = await stripe.checkout.sessions.create({
             line_items:line_items,
             mode:'payment',
