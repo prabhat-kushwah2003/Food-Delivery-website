@@ -46,8 +46,8 @@ const PlaceOrder = () => {
       window.location.replace(session_url);
     }
     else{
-      console.log("PLACE ORDER ERROR:");
-      console.log(error);
+      // console.log("PLACE ORDER ERROR:");
+      // console.log(error);
       alert("Error");
     }
   }
